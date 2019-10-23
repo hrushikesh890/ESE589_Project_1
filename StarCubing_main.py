@@ -18,6 +18,8 @@ def read_data(filename):
 		if (sIter == ""):
 			continue
 		lData.append(sIter.split(","))
+	print("No of Tuples : %s" %(len(lData[0])))
+	print("No of Samples: %s" %(len(lData)))
 	return lData
 
 
@@ -196,7 +198,7 @@ def main():
 		print("Run Time %s"% (stop_time - start_time))		
 		process = psutil.Process(os.getpid())
 		print("Memory util -> %s"% process.memory_info().rss)
-		print("####################### END #######################")
+		print("####################### END #######################\n")
 
 
 if __name__ == "__main__":
